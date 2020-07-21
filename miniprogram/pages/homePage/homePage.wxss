@@ -1,0 +1,31 @@
+/* pages/homePage/homePage.wxss */
+.movie{
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.movie-img{
+  width:200rpx;
+  height: 300rpx;
+  margin-right: 20rpx;
+}
+.movie-info{
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 1.8;
+}
+.movie-title{
+  color: #666;
+  font-size: 40rpx;
+}
+.rate{
+  color: #faaf00;
+}
+.movie-detail{
+  background: #e54847;
+  color: #fff;
+  height: 60rpx;
+  font-size: 26rpx;
+  margin-top: 120rpx;
+}
+

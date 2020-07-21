@@ -1,0 +1,21 @@
+/* pages/profile/profile.wxss */
+/*1:父元素*/
+.profile{
+  background: #e54847;
+  height:400rpx;        /*父元素高度400rpx*/
+  width:100%;
+  text-align: center;   /*子元素居中*/
+  position: relative;   /*相对定位*/
+}
+/*2:头像子元素*/
+.profile-img{
+  position: absolute;/*绝对定位*/
+  width: 200rpx;/*宽度和高度200*/
+  height:200rpx;
+  display: block;    /*显示块元素*/
+  overflow: hidden;  /*溢出隐藏*/
+  border-radius: 50%;/*圆角50% 圆形*/
+  left:50%;          /*居中*/
+  transform: translate(-50%,60rpx);
+}
+

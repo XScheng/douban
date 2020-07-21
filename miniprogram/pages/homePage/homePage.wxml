@@ -1,0 +1,14 @@
+<!--pages/homePage/homePage.wxml-->
+<view class="movie" wx:for="{{list}}" wx:key="index">
+  <!-- 1.左侧图片 -->
+  <image src="{{item.images.small}}" class="movie-img"></image>
+  <!-- 2.右侧详情 -->
+  <view class="movie-info">
+    <view class="movie-title">主题：{{item.title}}</view>
+    <view>原题：{{item.original_title}}</view>
+    <view class="rate">评分:{{item.rating.average}}</view>
+    <view>主演:{{item.casts[0].name}}</view>
+    <view>上映时间:{{item.mainland_pubdate}}</view>
+    <button class="movie-detail" bindtap="jumpDetail" data-id="{{item.id}}">详情</button>
+  </view>
+</view>

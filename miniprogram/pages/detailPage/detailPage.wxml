@@ -1,0 +1,29 @@
+<!--pages/detailPage/detailPage.wxml-->
+<view class="detail-container" style="background:url({{detail.images.large}}) no-repeat top"></view>
+<view class="detail-mask"></view>
+<view class="detail-info">
+  <image src="{{detail.images.small}}" class="detail-img"></image>
+  <view class="detail">
+    <view>标题:{{detail.title}}</view>
+    <view>原标题:{{detail.original_title}}</view>
+    <view>分数:{{detail.rating.average}}</view>
+    <view>国家:{{detail.countries}}</view>
+    <view>导演:{{detail.directors[0].name}}</view>
+  </view>
+</view>
+<view>电影描述:{{detail.summary}}</view>
+<!-- 评论 -->
+ <van-field
+    value="{{ comment }}"
+    placeholder="请评论..."
+    bind:change="onChangeComment"
+  />
+<!-- 打分 -->
+<van-rate value="{{rate }}" bind:change="onChangeRate" />
+<!-- 上传图片 -->
+<van-button type="warning" size="large" bindtap="uploadImg">上传图片</van-button>
+<view>
+  <image wx:for="{{images}}" wx:key="index" class="view-img" src="{{item}}"></image>
+</view>
+<!-- 发表评论 -->
+<van-button type="info" size="large" bindtap="deliverComment">发表评论</van-button>
